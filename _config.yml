@@ -103,4 +103,4 @@ theme: landscape
  deploy:
    type: git
    repository: git@github.com:QQQ-tt/QQQ-tt.github.io.git  # 你的仓库地址
-   branch: pages
+   branch: main
