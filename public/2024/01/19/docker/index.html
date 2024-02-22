@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>QQQ-tt</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="QQQ-tt"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="QQQ-tt"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="1.docker安装1curl -fsSL https:&amp;#x2F;&amp;#x2F;get.docker.com | bash -s docker --mirror Aliyun  2.镜像源配置（可选项）更改配置后重启docker 2.1 docker hub镜像源12# 查看文件内容cat &amp;#x2F;etc&amp;#x2F;docker&amp;#x2F;daemon.json  1234567891011# 添加以下内容（可选项）sudo tee &amp;#x2F;etc"><meta property="og:type" content="blog"><meta property="og:title" content="QQQ-tt"><meta property="og:url" content="http://example.com/2024/01/19/docker/"><meta property="og:site_name" content="QQQ-tt"><meta property="og:description" content="1.docker安装1curl -fsSL https:&amp;#x2F;&amp;#x2F;get.docker.com | bash -s docker --mirror Aliyun  2.镜像源配置（可选项）更改配置后重启docker 2.1 docker hub镜像源12# 查看文件内容cat &amp;#x2F;etc&amp;#x2F;docker&amp;#x2F;daemon.json  1234567891011# 添加以下内容（可选项）sudo tee &amp;#x2F;etc"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:published_time" content="2024-01-19T05:42:33.596Z"><meta property="article:modified_time" content="2024-01-19T06:05:51.372Z"><meta property="article:author" content="QQQ"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/19/docker/"},"headline":"QQQ-tt","image":["http://example.com/img/og_image.png"],"datePublished":"2024-01-19T05:42:33.596Z","dateModified":"2024-01-19T06:05:51.372Z","author":{"@type":"Person","name":"QQQ"},"publisher":{"@type":"Organization","name":"QQQ-tt","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"1.docker安装1curl -fsSL https:&#x2F;&#x2F;get.docker.com | bash -s docker --mirror Aliyun  2.镜像源配置（可选项）更改配置后重启docker 2.1 docker hub镜像源12# 查看文件内容cat &#x2F;etc&#x2F;docker&#x2F;daemon.json  1234567891011# 添加以下内容（可选项）sudo tee &#x2F;etc"}</script><link rel="canonical" href="http://example.com/2024/01/19/docker/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="QQQ-tt" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-01-19T05:42:33.596Z" title="2024/1/19 13:42:33">2024-01-19</time>发表</span><span class="level-item"><time dateTime="2024-01-19T06:05:51.372Z" title="2024/1/19 14:05:51">2024-01-19</time>更新</span><span class="level-item">4 分钟读完 (大约588个字)</span></div></div><div class="content"><h2 id="1-docker安装"><a href="#1-docker安装" class="headerlink" title="1.docker安装"></a>1.docker安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-镜像源配置（可选项）"><a href="#2-镜像源配置（可选项）" class="headerlink" title="2.镜像源配置（可选项）"></a>2.镜像源配置（可选项）</h2><p>更改配置后重启docker</p>
+<h3 id="2-1-docker-hub镜像源"><a href="#2-1-docker-hub镜像源" class="headerlink" title="2.1 docker hub镜像源"></a>2.1 docker hub镜像源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看文件内容</span></span><br><span class="line">cat /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加以下内容（可选项）</span></span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://dockerproxy.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://ccr.ccs.tencentyun.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">镜像来源</th>
+<th align="center">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">网易云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://hub-mirror.c.163.com/">https://hub-mirror.c.163.com</a></td>
+</tr>
+<tr>
+<td align="center">百度云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirror.baidubce.com/">https://mirror.baidubce.com</a></td>
+</tr>
+<tr>
+<td align="center">阿里云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://0lah620j.mirror.aliyuncs.com/">https://0lah620j.mirror.aliyuncs.com</a></td>
+</tr>
+</tbody></table>
+<h3 id="2-2-私有仓库源"><a href="#2-2-私有仓库源" class="headerlink" title="2.2 私有仓库源"></a>2.2 私有仓库源</h3><p>向daemon.json文件添加以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	  &quot;insecure-registries&quot;: [&quot;ip:port&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-开放2375-port"><a href="#3-开放2375-port" class="headerlink" title="3.开放2375 port"></a>3.开放2375 port</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ExecStart 最后添加</span></span><br><span class="line">-H tcp://0.0.0.0:2375</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看端口情况</span></span><br><span class="line">netstat -ano | grep 2375</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-部分docker命令"><a href="#4-部分docker命令" class="headerlink" title="4.部分docker命令"></a>4.部分docker命令</h2><h3 id="4-1-删除全部none镜像"><a href="#4-1-删除全部none镜像" class="headerlink" title="4.1 删除全部none镜像"></a>4.1 删除全部none镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images | grep &quot;none&quot; | awk &#x27;&#123;print $3&#125;&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-如果镜像在运行"><a href="#4-2-如果镜像在运行" class="headerlink" title="4.2 如果镜像在运行"></a>4.2 如果镜像在运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">停止容器</span></span><br><span class="line">docker stop $(docker ps -a | grep &quot;Exited&quot; | awk &#x27;&#123;print $1 &#125;&#x27;) </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除容器</span></span><br><span class="line">docker rm $(docker ps -a | grep &quot;Exited&quot; | awk &#x27;&#123;print $1 &#125;&#x27;)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除镜像</span></span><br><span class="line">docker rmi $(docker images | grep &quot;none&quot; | awk &#x27;&#123;print $3&#125;&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-根据容器名称删除容器及镜像"><a href="#4-3-根据容器名称删除容器及镜像" class="headerlink" title="4.3 根据容器名称删除容器及镜像"></a>4.3 根据容器名称删除容器及镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">container_id=`docker ps -aq --filter &quot;ancestor=$1&quot;`</span><br><span class="line">echo $container_id</span><br><span class="line">docker stop $container_id</span><br><span class="line">docker rm $container_id</span><br><span class="line">image_id=`docker image ls -q -f &quot;reference=$1&quot;`</span><br><span class="line">echo $image_id</span><br><span class="line">docker rmi $image_id</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-导入导出"><a href="#4-4-导入导出" class="headerlink" title="4.4 导入导出"></a>4.4 导入导出</h3><h4 id="4-4-1-save"><a href="#4-4-1-save" class="headerlink" title="4.4.1 save"></a>4.4.1 save</h4><blockquote>
+<p>docker save [options] images [images…]</p>
+</blockquote>
+<p>示例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker save -o xxx.tar xxx:latest</span><br><span class="line">docker save &gt; xxx.tar xxx:latest</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-2-load"><a href="#4-4-2-load" class="headerlink" title="4.4.2 load"></a>4.4.2 load</h4><blockquote>
+<p>docker load [options]</p>
+</blockquote>
+<p>示例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker load -i xxx.tar</span><br><span class="line">docker load &lt; xxx.tar</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-3-export"><a href="#4-4-3-export" class="headerlink" title="4.4.3 export"></a>4.4.3 export</h4><blockquote>
+<p>docker export [options] container</p>
+</blockquote>
+<p>示例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker export -o xxx.tar xxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-4-import"><a href="#4-4-4-import" class="headerlink" title="4.4.4 import"></a>4.4.4 import</h4><blockquote>
+<p>docker import [options] file|URL|- [REPOSITORY[:TAG]]</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker import xxx:tar xxx:tag</span><br><span class="line">cat xxx.tar | docker import - xxx:tag</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-5-区别"><a href="#4-4-5-区别" class="headerlink" title="4.4.5 区别"></a>4.4.5 区别</h4><ul>
+<li>export命令导出的tar文件略小于save命令导出的</li>
+<li>export命令是从容器（container）中导出tar文件，而save命令则是从镜像（images）中导出</li>
+<li>基于第二点，export导出的文件再import回去时，无法保留镜像所有历史（即每一层layer信息）</li>
+</ul>
+<h3 id="4-5-查看容器信息"><a href="#4-5-查看容器信息" class="headerlink" title="4.5  查看容器信息"></a>4.5  查看容器信息</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect [OPTIONS] NAME|ID [NAME|ID...]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect -f &#x27;&#123;&#123;range .NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;&#x27; 容器</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>&#123;&#123;range .NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;</code>是go语言的模板<code>&#123;&#123;  &#125;&#125;</code>是开始和结束，<code>range</code>是开始遍历，<code>end</code>是结束遍历</p>
+<h3 id="4-5-进入容器"><a href="#4-5-进入容器" class="headerlink" title="4.5 进入容器"></a>4.5 进入容器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 容器 /bin/bash </span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-容器运行挂载目录"><a href="#4-6-容器运行挂载目录" class="headerlink" title="4.6 容器运行挂载目录"></a>4.6 容器运行挂载目录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">最后结尾没有 <span class="string">&#x27;/&#x27;</span> 可以是目录也可以是文件</span></span><br><span class="line">/home/qtx/mysql/my.cnf:/etc/my.cnf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">最后结尾有 <span class="string">&#x27;/&#x27;</span> 代表是目录</span></span><br><span class="line">/home/qtx/mysql/:/var/lib/mysql/</span><br></pre></td></tr></table></figure></div><div class="article-licensing box"><div class="licensing-title"><p><a href="http://example.com/2024/01/19/docker/">http://example.com/2024/01/19/docker/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>QQQ</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-01-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-01-19</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/01/09/hello-world/"><span class="level-item">Hello World</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/99873830_p0_master12010.jpg" alt="QQQ-tt"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">QQQ-tt</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>ShuZhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-19T05:42:33.596Z">2024-01-19</time></p><p class="title"><a href="/2024/01/19/docker/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-09T06:08:17.432Z">2024-01-09</time></p><p class="title"><a href="/2024/01/09/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/01/"><span class="level-start"><span class="level-item">一月 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="QQQ-tt" height="28"></a><p class="is-size-7"><span>&copy; 2024 QQQ</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
